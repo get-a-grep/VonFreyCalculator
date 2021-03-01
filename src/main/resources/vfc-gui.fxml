@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane prefHeight="441.0" prefWidth="756.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mcgill.mads.ui.VfcController">
+  <tabs>
+    <Tab text="Xf Profile">
+      <content>
+          <AnchorPane prefHeight="180.0" prefWidth="200.0">
+              <children>
+                  <AnchorPane layoutX="323.0" prefHeight="411.0" prefWidth="394.0">
+                     <children>
+                          <TextField layoutX="129.0" layoutY="36.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 2" fx:id="xfValue2" />
+                          <TextField layoutX="129.0" layoutY="76.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 3" fx:id="xfValue3" />
+                          <TextField layoutX="129.0" layoutY="116.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 4" fx:id="xfValue4" />
+                          <TextField layoutX="129.0" layoutY="156.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 5" fx:id="xfValue5" />
+                          <TextField layoutX="129.0" layoutY="196.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 6" fx:id="xfValue6" />
+                          <TextField layoutX="129.0" layoutY="236.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 7" fx:id="xfValue7" />
+                          <TextField layoutX="129.0" layoutY="276.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 8" fx:id="xfValue8" />
+                          <TextField layoutX="129.0" layoutY="316.0" prefHeight="26.0" prefWidth="105.0" promptText="Xf 9" fx:id="xfValue9" />
+                          <Label layoutX="24.0" layoutY="36.0" text="XF Information:">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                        <Button fx:id="saveButton" layoutX="266.0" layoutY="316.0" mnemonicParsing="false" text="Save" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="409.0" prefWidth="328.0">
+                     <children>
+                          <TextField fx:id="testerName" layoutX="151.0" layoutY="36.0" promptText="Tester Name" />
+                          <TextField fx:id="testerInterval" layoutX="151.0" layoutY="76.0" promptText="Tester Interval" />
+                          <Label layoutX="26.0" layoutY="36.0" text="Tester Information:">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                     </children>
+                  </AnchorPane>
+              </children>
+          </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Von Frey Calculator">
+      <content>
+        <AnchorPane minHeight="0.0" prefHeight="403.0" prefWidth="699.0">
+               <children>
+                  <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="351.0" prefWidth="756.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" layoutX="38.0" layoutY="40.0" prefHeight="300.0" prefWidth="692.0">
+                          <columnConstraints>
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf2" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf3" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf4" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf5" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf6" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf7" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf8" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" fx:id="xf9" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo1" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo2" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo3" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo4" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo5" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo6" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo7" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo8" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" fx:id="xo9" />
+                          </rowConstraints>
+                           <children>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" fx:id="xo1xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" fx:id="xo1xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="1" fx:id="xo2xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="xo2xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="xo2xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="xo2xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="1" fx:id="xo2xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="1" fx:id="xo2xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="1" fx:id="xo2xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="1" fx:id="xo2xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="1" fx:id="xo2xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="2" fx:id="xo3xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="xo3xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="2" fx:id="xo3xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="xo3xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="2" fx:id="xo3xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="2" fx:id="xo3xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="2" fx:id="xo3xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="2" fx:id="xo3xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="2" fx:id="xo3xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="3" fx:id="xo4xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="xo4xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="3" fx:id="xo4xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="xo4xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="3" fx:id="xo4xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="3" fx:id="xo4xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="3" fx:id="xo4xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="3" fx:id="xo4xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="3" fx:id="xo4xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="4" fx:id="xo5xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="xo5xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="4" fx:id="xo5xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="xo5xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" fx:id="xo5xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="4" fx:id="xo5xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="4" fx:id="xo5xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="4" fx:id="xo5xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="4" fx:id="xo5xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="5" fx:id="xo6xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="xo6xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="5" fx:id="xo6xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="xo6xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="5" fx:id="xo6xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="5" fx:id="xo6xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="5" fx:id="xo6xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="5" fx:id="xo6xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="5" fx:id="xo6xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="6" fx:id="xo7xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="6" fx:id="xo7xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="6" fx:id="xo7xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="6" fx:id="xo7xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="6" fx:id="xo7xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="6" fx:id="xo7xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="6" fx:id="xo7xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="6" fx:id="xo7xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="6" fx:id="xo7xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="7" fx:id="xo8xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="7" fx:id="xo8xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="7" fx:id="xo8xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="7" fx:id="xo8xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="7" fx:id="xo8xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="7" fx:id="xo8xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="7" fx:id="xo8xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="7" fx:id="xo8xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="7" fx:id="xo8xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.rowIndex="8" fx:id="xo9xf2X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf2O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="1" GridPane.rowIndex="8" fx:id="xo9xf3X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf3O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="2" GridPane.rowIndex="8" fx:id="xo9xf4X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf4O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="3" GridPane.rowIndex="8" fx:id="xo9xf5X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf5O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="4" GridPane.rowIndex="8" fx:id="xo9xf6X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf6O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="5" GridPane.rowIndex="8" fx:id="xo9xf7X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf7O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="6" GridPane.rowIndex="8" fx:id="xo9xf8X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf8O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="X" GridPane.columnIndex="7" GridPane.rowIndex="8" fx:id="xo9xf9X">
+                                   <GridPane.margin>
+                                       <Insets left="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                               <CheckBox mnemonicParsing="false" text="O" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="8" fx:id="xo9xf9O">
+                                   <GridPane.margin>
+                                       <Insets right="2.0" />
+                                   </GridPane.margin>
+                               </CheckBox>
+                           </children>
+                        </GridPane>
+                        <Label layoutX="74.0" layoutY="12.0" text="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="159.0" layoutY="12.0" text="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="246.0" layoutY="12.0" text="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="332.0" layoutY="12.0" text="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="417.0" layoutY="12.0" text="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="504.0" layoutY="12.0" text="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="592.0" layoutY="12.0" text="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="680.0" layoutY="12.0" text="9">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="45.0" text="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="78.0" text="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="111.0" text="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="144.0" text="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="177.0" text="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="210.0" text="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="243.0" text="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="277.0" text="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="310.0" text="9">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1.0" layoutY="349.0" prefHeight="62.0" prefWidth="756.0">
+                     <children>
+                        <TextArea fx:id="endingXF" editable="false" layoutX="35.0" prefHeight="24.0" prefWidth="136.0" promptText="Current XF" />
+                        <TextArea editable="false" layoutX="205.0" prefHeight="24.0" prefWidth="136.0" promptText="XO Series" fx:id="xoSeries" />
+                        <TextArea fx:id="answer" editable="false" layoutX="378.0" prefHeight="29.0" prefWidth="136.0" promptText="Answer" />
+                        <Button fx:id="calculate" layoutX="636.0" layoutY="10.0" mnemonicParsing="false" text="Calculate">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearButton" layoutX="552.0" layoutY="11.0" mnemonicParsing="false" text="Clear">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

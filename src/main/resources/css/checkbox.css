@@ -1,0 +1,10 @@
+.check-box > .box > .mark {
+    -fx-background-color: null;
+    -fx-padding: 0.416667em 0.416667em 0.5em 0.5em; /* 5 5 6 6 */
+    -fx-shape: "M2,0L5,4L8,0L10,0L10,2L6,5L10,8L10,10L8,10L5,6L2,10L0,10L0,8L4,5L0,2L0,0Z";
+}
+.check-box:indeterminate  > .box > .mark {
+    -fx-shape: "";
+    -fx-scale-shape: false;
+    -fx-padding: 0.666667em; /* 16x16 = 8+8 */
+}
