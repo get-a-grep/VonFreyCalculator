@@ -4,10 +4,8 @@ import org.mcgill.mads.exception.GUIErrorMessage;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import org.mcgill.mads.table.Cell;
 import org.mcgill.mads.table.Row;
 
 import java.io.*;
@@ -67,275 +65,146 @@ public class VfcController {
     private Button clearButton;
 
     @FXML
-    private CheckBox xo1xf5X;
-    @FXML
-    private CheckBox xo1xf5O;
+    private Button buttonXf5xo1;
 
     @FXML
-    private CheckBox xo2xf2X;
+    private Button buttonXf2xo2;
     @FXML
-    private CheckBox xo2xf2O;
+    private Button buttonXf3xo2;
     @FXML
-    private CheckBox xo2xf3X;
+    private Button buttonXf4xo2;
     @FXML
-    private CheckBox xo2xf3O;
+    private Button buttonXf5xo2;
     @FXML
-    private CheckBox xo2xf4X;
+    private Button buttonXf6xo2;
     @FXML
-    private CheckBox xo2xf4O;
+    private Button buttonXf7xo2;
     @FXML
-    private CheckBox xo2xf5X;
+    private Button buttonXf8xo2;
     @FXML
-    private CheckBox xo2xf5O;
-    @FXML
-    private CheckBox xo2xf6X;
-    @FXML
-    private CheckBox xo2xf6O;
-    @FXML
-    private CheckBox xo2xf7X;
-    @FXML
-    private CheckBox xo2xf7O;
-    @FXML
-    private CheckBox xo2xf8X;
-    @FXML
-    private CheckBox xo2xf8O;
-    @FXML
-    private CheckBox xo2xf9X;
-    @FXML
-    private CheckBox xo2xf9O;
+    private Button buttonXf9xo2;
 
     @FXML
-    private CheckBox xo3xf2X;
+    private Button buttonXf2xo3;
     @FXML
-    private CheckBox xo3xf2O;
+    private Button buttonXf3xo3;
     @FXML
-    private CheckBox xo3xf3X;
+    private Button buttonXf4xo3;
     @FXML
-    private CheckBox xo3xf3O;
+    private Button buttonXf5xo3;
     @FXML
-    private CheckBox xo3xf4X;
+    private Button buttonXf6xo3;
     @FXML
-    private CheckBox xo3xf4O;
+    private Button buttonXf7xo3;
     @FXML
-    private CheckBox xo3xf5X;
+    private Button buttonXf8xo3;
     @FXML
-    private CheckBox xo3xf5O;
-    @FXML
-    private CheckBox xo3xf6X;
-    @FXML
-    private CheckBox xo3xf6O;
-    @FXML
-    private CheckBox xo3xf7X;
-    @FXML
-    private CheckBox xo3xf7O;
-    @FXML
-    private CheckBox xo3xf8X;
-    @FXML
-    private CheckBox xo3xf8O;
-    @FXML
-    private CheckBox xo3xf9X;
-    @FXML
-    private CheckBox xo3xf9O;
+    private Button buttonXf9xo3;
 
     @FXML
-    private CheckBox xo4xf2X;
+    private Button buttonXf2xo4;
     @FXML
-    private CheckBox xo4xf2O;
+    private Button buttonXf3xo4;
     @FXML
-    private CheckBox xo4xf3X;
+    private Button buttonXf4xo4;
     @FXML
-    private CheckBox xo4xf3O;
+    private Button buttonXf5xo4;
     @FXML
-    private CheckBox xo4xf4X;
+    private Button buttonXf6xo4;
     @FXML
-    private CheckBox xo4xf4O;
+    private Button buttonXf7xo4;
     @FXML
-    private CheckBox xo4xf5X;
+    private Button buttonXf8xo4;
     @FXML
-    private CheckBox xo4xf5O;
-    @FXML
-    private CheckBox xo4xf6X;
-    @FXML
-    private CheckBox xo4xf6O;
-    @FXML
-    private CheckBox xo4xf7X;
-    @FXML
-    private CheckBox xo4xf7O;
-    @FXML
-    private CheckBox xo4xf8X;
-    @FXML
-    private CheckBox xo4xf8O;
-    @FXML
-    private CheckBox xo4xf9X;
-    @FXML
-    private CheckBox xo4xf9O;
+    private Button buttonXf9xo4;
 
     @FXML
-    private CheckBox xo5xf2X;
+    private Button buttonXf2xo5;
     @FXML
-    private CheckBox xo5xf2O;
+    private Button buttonXf3xo5;
     @FXML
-    private CheckBox xo5xf3X;
+    private Button buttonXf4xo5;
     @FXML
-    private CheckBox xo5xf3O;
+    private Button buttonXf5xo5;
     @FXML
-    private CheckBox xo5xf4X;
+    private Button buttonXf6xo5;
     @FXML
-    private CheckBox xo5xf4O;
+    private Button buttonXf7xo5;
     @FXML
-    private CheckBox xo5xf5X;
+    private Button buttonXf8xo5;
     @FXML
-    private CheckBox xo5xf5O;
-    @FXML
-    private CheckBox xo5xf6X;
-    @FXML
-    private CheckBox xo5xf6O;
-    @FXML
-    private CheckBox xo5xf7X;
-    @FXML
-    private CheckBox xo5xf7O;
-    @FXML
-    private CheckBox xo5xf8X;
-    @FXML
-    private CheckBox xo5xf8O;
-    @FXML
-    private CheckBox xo5xf9X;
-    @FXML
-    private CheckBox xo5xf9O;
+    private Button buttonXf9xo5;
 
     @FXML
-    private CheckBox xo6xf2X;
+    private Button buttonXf2xo6;
     @FXML
-    private CheckBox xo6xf2O;
+    private Button buttonXf3xo6;
     @FXML
-    private CheckBox xo6xf3X;
+    private Button buttonXf4xo6;
     @FXML
-    private CheckBox xo6xf3O;
+    private Button buttonXf5xo6;
     @FXML
-    private CheckBox xo6xf4X;
+    private Button buttonXf6xo6;
     @FXML
-    private CheckBox xo6xf4O;
+    private Button buttonXf7xo6;
     @FXML
-    private CheckBox xo6xf5X;
+    private Button buttonXf8xo6;
     @FXML
-    private CheckBox xo6xf5O;
-    @FXML
-    private CheckBox xo6xf6X;
-    @FXML
-    private CheckBox xo6xf6O;
-    @FXML
-    private CheckBox xo6xf7X;
-    @FXML
-    private CheckBox xo6xf7O;
-    @FXML
-    private CheckBox xo6xf8X;
-    @FXML
-    private CheckBox xo6xf8O;
-    @FXML
-    private CheckBox xo6xf9X;
-    @FXML
-    private CheckBox xo6xf9O;
+    private Button buttonXf9xo6;
 
     @FXML
-    private CheckBox xo7xf2X;
+    private Button buttonXf2xo7;
     @FXML
-    private CheckBox xo7xf2O;
+    private Button buttonXf3xo7;
     @FXML
-    private CheckBox xo7xf3X;
+    private Button buttonXf4xo7;
     @FXML
-    private CheckBox xo7xf3O;
+    private Button buttonXf5xo7;
     @FXML
-    private CheckBox xo7xf4X;
+    private Button buttonXf6xo7;
     @FXML
-    private CheckBox xo7xf4O;
+    private Button buttonXf7xo7;
     @FXML
-    private CheckBox xo7xf5X;
+    private Button buttonXf8xo7;
     @FXML
-    private CheckBox xo7xf5O;
-    @FXML
-    private CheckBox xo7xf6X;
-    @FXML
-    private CheckBox xo7xf6O;
-    @FXML
-    private CheckBox xo7xf7X;
-    @FXML
-    private CheckBox xo7xf7O;
-    @FXML
-    private CheckBox xo7xf8X;
-    @FXML
-    private CheckBox xo7xf8O;
-    @FXML
-    private CheckBox xo7xf9X;
-    @FXML
-    private CheckBox xo7xf9O;
+    private Button buttonXf9xo7;
 
     @FXML
-    private CheckBox xo8xf2X;
+    private Button buttonXf2xo8;
     @FXML
-    private CheckBox xo8xf2O;
+    private Button buttonXf3xo8;
     @FXML
-    private CheckBox xo8xf3X;
+    private Button buttonXf4xo8;
     @FXML
-    private CheckBox xo8xf3O;
+    private Button buttonXf5xo8;
     @FXML
-    private CheckBox xo8xf4X;
+    private Button buttonXf6xo8;
     @FXML
-    private CheckBox xo8xf4O;
+    private Button buttonXf7xo8;
     @FXML
-    private CheckBox xo8xf5X;
+    private Button buttonXf8xo8;
     @FXML
-    private CheckBox xo8xf5O;
-    @FXML
-    private CheckBox xo8xf6X;
-    @FXML
-    private CheckBox xo8xf6O;
-    @FXML
-    private CheckBox xo8xf7X;
-    @FXML
-    private CheckBox xo8xf7O;
-    @FXML
-    private CheckBox xo8xf8X;
-    @FXML
-    private CheckBox xo8xf8O;
-    @FXML
-    private CheckBox xo8xf9X;
-    @FXML
-    private CheckBox xo8xf9O;
+    private Button buttonXf9xo8;
 
     @FXML
-    private CheckBox xo9xf2X;
+    private Button buttonXf2xo9;
     @FXML
-    private CheckBox xo9xf2O;
+    private Button buttonXf3xo9;
     @FXML
-    private CheckBox xo9xf3X;
+    private Button buttonXf4xo9;
     @FXML
-    private CheckBox xo9xf3O;
+    private Button buttonXf5xo9;
     @FXML
-    private CheckBox xo9xf4X;
+    private Button buttonXf6xo9;
     @FXML
-    private CheckBox xo9xf4O;
+    private Button buttonXf7xo9;
     @FXML
-    private CheckBox xo9xf5X;
+    private Button buttonXf8xo9;
     @FXML
-    private CheckBox xo9xf5O;
-    @FXML
-    private CheckBox xo9xf6X;
-    @FXML
-    private CheckBox xo9xf6O;
-    @FXML
-    private CheckBox xo9xf7X;
-    @FXML
-    private CheckBox xo9xf7O;
-    @FXML
-    private CheckBox xo9xf8X;
-    @FXML
-    private CheckBox xo9xf8O;
-    @FXML
-    private CheckBox xo9xf9X;
-    @FXML
-    private CheckBox xo9xf9O;
+    private Button buttonXf9xo9;
 
     private File logFile;
+    private ArrayList<Row> appTable;
 
     @FXML
     private void initialize() {
@@ -354,11 +223,34 @@ public class VfcController {
 
         saveButton.setOnAction(x -> save());
 
+        appTable = makeTable();
+
+        buttonXf5xo1.setOnAction(x -> setButtonState(buttonXf5xo1));
+        for (Row row : appTable) {
+            for (Button button : row.getButtonList()) {
+                button.setOnAction(x -> setButtonState(button));
+            }
+        }
+
+
+
         //Set Calculator tab
         calculate.setOnAction(x -> calculate());
 
         //Set Clear button
         clearButton.setOnAction(x -> clear());
+    }
+
+    private void setButtonState(Button button) {
+        Platform.runLater(() -> {
+            if (button.getText() == null || button.getText().isEmpty()) {
+                button.setText("X");
+            } else if (button.getText() == "X") {
+                button.setText("O");
+            } else {
+                button.setText("");
+            }
+        });
     }
 
     private void save() {
@@ -411,10 +303,8 @@ public class VfcController {
         Platform.runLater(() -> {
             ArrayList<String> xoList = new ArrayList<>();
 
-            if (xo1xf5O.isSelected()) {
-                xoList.add("O");
-            } else  if (xo1xf5X.isSelected()){
-                xoList.add("X");
+            if (buttonXf5xo1.getText() != null && !buttonXf5xo1.getText().isEmpty()) {
+                xoList.add(buttonXf5xo1.getText());
             } else {
                 GUIErrorMessage.NO_INITIAL_XF.display();
                 return;
@@ -423,11 +313,11 @@ public class VfcController {
             ArrayList<Row> table = makeTable();
             int curRow = 1;
             for (Row row : table) {
-                for (Cell cell : row.getCellList()) {
-                    if (cell.getXO() == null) {
+                for (Button button : row.getButtonList()) {
+                    if (button.getText() == null || button.getText().isEmpty()) {
                         continue;
                     } else {
-                        xoList.add(cell.getXO());
+                        xoList.add(button.getText());
                         curRow++;
                         break;
                     }
@@ -437,9 +327,9 @@ public class VfcController {
             System.out.println("Current Row is: " + curRow);
             Row lastRow = table.get(curRow - 2);
             int lastXF = 2;
-            for (Cell cell : lastRow.getCellList()) {
+            for (Button button : lastRow.getButtonList()) {
                 System.out.println("Checking column: " + lastXF);
-                if (cell.getXO() != null) {
+                if (button.getText() != null && !button.getText().isEmpty()) {
                     System.out.println("Last XF: " + lastXF);
                     break;
                 }
@@ -525,15 +415,13 @@ public class VfcController {
             xoSeries.clear();
             answer.clear();
 
-            xo1xf5O.setSelected(false);
-            xo1xf5X.setSelected(false);
+            buttonXf5xo1.setText("");
 
             ArrayList<Row> table = makeTable();
 
             for (Row row : table) {
-                for (Cell cell : row.getCellList()) {
-                    cell.getX().setSelected(false);
-                    cell.getO().setSelected(false);
+                for (Button button : row.getButtonList()) {
+                    button.setText("");
                 }
             }
         });
@@ -570,84 +458,84 @@ public class VfcController {
     private ArrayList<Row> makeTable() {
         ArrayList<Row> table = new ArrayList<>();
         Row r2 = new Row(
-                new Cell(xo2xf2X, xo2xf2O),
-                new Cell(xo2xf3X, xo2xf3O),
-                new Cell(xo2xf4X, xo2xf4O),
-                new Cell(xo2xf5X, xo2xf5O),
-                new Cell(xo2xf6X, xo2xf6O),
-                new Cell(xo2xf7X, xo2xf7O),
-                new Cell(xo2xf8X, xo2xf8O),
-                new Cell(xo2xf9X, xo2xf9O)
+                buttonXf2xo2,
+                buttonXf3xo2,
+                buttonXf4xo2,
+                buttonXf5xo2,
+                buttonXf6xo2,
+                buttonXf7xo2,
+                buttonXf8xo2,
+                buttonXf9xo2
         );
         Row r3 = new Row(
-                new Cell(xo3xf2X, xo3xf2O),
-                new Cell(xo3xf3X, xo3xf3O),
-                new Cell(xo3xf4X, xo3xf4O),
-                new Cell(xo3xf5X, xo3xf5O),
-                new Cell(xo3xf6X, xo3xf6O),
-                new Cell(xo3xf7X, xo3xf7O),
-                new Cell(xo3xf8X, xo3xf8O),
-                new Cell(xo3xf9X, xo3xf9O)
+                buttonXf2xo3,
+                buttonXf3xo3,
+                buttonXf4xo3,
+                buttonXf5xo3,
+                buttonXf6xo3,
+                buttonXf7xo3,
+                buttonXf8xo3,
+                buttonXf9xo3
         );
         Row r4 = new Row(
-                new Cell(xo4xf2X, xo4xf2O),
-                new Cell(xo4xf3X, xo4xf3O),
-                new Cell(xo4xf4X, xo4xf4O),
-                new Cell(xo4xf5X, xo4xf5O),
-                new Cell(xo4xf6X, xo4xf6O),
-                new Cell(xo4xf7X, xo4xf7O),
-                new Cell(xo4xf8X, xo4xf8O),
-                new Cell(xo4xf9X, xo4xf9O)
+                buttonXf2xo4,
+                buttonXf3xo4,
+                buttonXf4xo4,
+                buttonXf5xo4,
+                buttonXf6xo4,
+                buttonXf7xo4,
+                buttonXf8xo4,
+                buttonXf9xo4
         );
         Row r5 = new Row(
-                new Cell(xo5xf2X, xo5xf2O),
-                new Cell(xo5xf3X, xo5xf3O),
-                new Cell(xo5xf4X, xo5xf4O),
-                new Cell(xo5xf5X, xo5xf5O),
-                new Cell(xo5xf6X, xo5xf6O),
-                new Cell(xo5xf7X, xo5xf7O),
-                new Cell(xo5xf8X, xo5xf8O),
-                new Cell(xo5xf9X, xo5xf9O)
+                buttonXf2xo5,
+                buttonXf3xo5,
+                buttonXf4xo5,
+                buttonXf5xo5,
+                buttonXf6xo5,
+                buttonXf7xo5,
+                buttonXf8xo5,
+                buttonXf9xo5
         );
         Row r6 = new Row(
-                new Cell(xo6xf2X, xo6xf2O),
-                new Cell(xo6xf3X, xo6xf3O),
-                new Cell(xo6xf4X, xo6xf4O),
-                new Cell(xo6xf5X, xo6xf5O),
-                new Cell(xo6xf6X, xo6xf6O),
-                new Cell(xo6xf7X, xo6xf7O),
-                new Cell(xo6xf8X, xo6xf8O),
-                new Cell(xo6xf9X, xo6xf9O)
+                buttonXf2xo6,
+                buttonXf3xo6,
+                buttonXf4xo6,
+                buttonXf5xo6,
+                buttonXf6xo6,
+                buttonXf7xo6,
+                buttonXf8xo6,
+                buttonXf9xo6
         );
         Row r7 = new Row(
-                new Cell(xo7xf2X, xo7xf2O),
-                new Cell(xo7xf3X, xo7xf3O),
-                new Cell(xo7xf4X, xo7xf4O),
-                new Cell(xo7xf5X, xo7xf5O),
-                new Cell(xo7xf6X, xo7xf6O),
-                new Cell(xo7xf7X, xo7xf7O),
-                new Cell(xo7xf8X, xo7xf8O),
-                new Cell(xo7xf9X, xo7xf9O)
+                buttonXf2xo7,
+                buttonXf3xo7,
+                buttonXf4xo7,
+                buttonXf5xo7,
+                buttonXf6xo7,
+                buttonXf7xo7,
+                buttonXf8xo7,
+                buttonXf9xo7
         );
         Row r8 = new Row(
-                new Cell(xo8xf2X, xo8xf2O),
-                new Cell(xo8xf3X, xo8xf3O),
-                new Cell(xo8xf4X, xo8xf4O),
-                new Cell(xo8xf5X, xo8xf5O),
-                new Cell(xo8xf6X, xo8xf6O),
-                new Cell(xo8xf7X, xo8xf7O),
-                new Cell(xo8xf8X, xo8xf8O),
-                new Cell(xo8xf9X, xo8xf9O)
+                buttonXf2xo8,
+                buttonXf3xo8,
+                buttonXf4xo8,
+                buttonXf5xo8,
+                buttonXf6xo8,
+                buttonXf7xo8,
+                buttonXf8xo8,
+                buttonXf9xo8
         );
         Row r9 = new Row(
-                new Cell(xo9xf2X, xo9xf2O),
-                new Cell(xo9xf3X, xo9xf3O),
-                new Cell(xo9xf4X, xo9xf4O),
-                new Cell(xo9xf5X, xo9xf5O),
-                new Cell(xo9xf6X, xo9xf6O),
-                new Cell(xo9xf7X, xo9xf7O),
-                new Cell(xo9xf8X, xo9xf8O),
-                new Cell(xo9xf9X, xo9xf9O)
+                buttonXf2xo9,
+                buttonXf3xo9,
+                buttonXf4xo9,
+                buttonXf5xo9,
+                buttonXf6xo9,
+                buttonXf7xo9,
+                buttonXf8xo9,
+                buttonXf9xo9
         );
 
         table.add(r2);
