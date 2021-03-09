@@ -1,5 +1,8 @@
 package org.mcgill.mads.ui;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ChoiceBox;
 import org.mcgill.mads.exception.GUIErrorMessage;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -13,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Scanner;
 
 public class VfcController {
 
@@ -63,6 +67,12 @@ public class VfcController {
 
     @FXML
     private Button clearButton;
+
+    @FXML
+    private Button loadProfileButton;
+
+    @FXML
+    private ChoiceBox profileSelection;
 
     @FXML
     private Button buttonXf5xo1;
@@ -205,12 +215,15 @@ public class VfcController {
 
     private File logFile;
     private ArrayList<Row> appTable;
+    private ArrayList<String> profiles;
 
     @FXML
     private void initialize() {
         //Set Profile tab
+        setProfileList();
         testerName.setOnAction(x -> save());
         testerInterval.setOnAction(x -> save());
+        loadProfileButton.setOnAction(x -> loadProfile());
 
         xfValue2.setOnAction(x -> save());
         xfValue3.setOnAction(x -> save());
@@ -231,8 +244,6 @@ public class VfcController {
                 button.setOnAction(x -> setButtonState(button));
             }
         }
-
-
 
         //Set Calculator tab
         calculate.setOnAction(x -> calculate());
@@ -297,6 +308,64 @@ public class VfcController {
                 GUIErrorMessage.CANT_WRITE_OUT.display();
             }
         });
+    }
+
+    private void loadProfile() {
+        Platform.runLater(() -> {
+            if (profileSelection.getValue() == null) {
+                GUIErrorMessage.INFO_NOT_GIVEN.display();
+            } else {
+                String profileLog = profileSelection.getValue() + ".txt";
+                File logFile = new File(profileLog);
+
+                try {
+                    Scanner reader = new Scanner(logFile);
+
+                    while (reader.hasNextLine()) {
+                        String thisLine = reader.nextLine();
+
+                        if (thisLine.startsWith("Tester: ")) {
+                            testerName.setText(thisLine.substring(8));
+                        } else if (thisLine.startsWith("Interval: ")) {
+                            testerInterval.setText(thisLine.substring(10));
+                        } else if (thisLine.startsWith("2: ")) {
+                            xfValue2.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("3: ")) {
+                            xfValue3.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("4: ")) {
+                            xfValue4.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("5: ")) {
+                            xfValue5.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("6: ")) {
+                            xfValue6.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("7: ")) {
+                            xfValue7.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("8: ")) {
+                            xfValue8.setText(thisLine.substring(3));
+                        } else if (thisLine.startsWith("9: ")) {
+                            xfValue9.setText(thisLine.substring(3));
+                        }
+                    }
+
+                } catch (IOException ioe) {
+                    GUIErrorMessage.DEFAULT.display();
+                }
+            }
+        });
+    }
+
+    private void setProfileList() {
+        File startDir = new File(".");
+
+        File[] matchingFiles = startDir.listFiles((dir, name) -> name.endsWith("txt"));
+
+        profiles = new ArrayList<>();
+        for (File file : matchingFiles) {
+            profiles.add(file.getName().substring(0, file.getName().length() - 4));
+        }
+
+        final ObservableList<String> pList = FXCollections.observableArrayList(profiles);
+        profileSelection.setItems(pList);
     }
 
     private void calculate() {

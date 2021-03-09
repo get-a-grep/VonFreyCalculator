@@ -28,7 +28,7 @@
                         <Button fx:id="saveButton" layoutX="266.0" layoutY="316.0" mnemonicParsing="false" text="Save" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="409.0" prefWidth="328.0">
+                  <AnchorPane prefHeight="168.0" prefWidth="328.0">
                      <children>
                           <TextField fx:id="testerName" layoutX="151.0" layoutY="36.0" promptText="Tester Name" />
                           <TextField fx:id="testerInterval" layoutX="151.0" layoutY="76.0" promptText="Tester Interval" />
@@ -37,6 +37,16 @@
                                   <Font size="14.0" />
                               </font>
                           </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="170.0" prefHeight="242.0" prefWidth="328.0">
+                     <children>
+                        <ChoiceBox fx:id="profileSelection" layoutX="150.0" layoutY="25.0" prefWidth="150.0" />
+                        <Button fx:id="loadProfileButton" layoutX="258.0" layoutY="65.0" mnemonicParsing="false" text="Load" />
+                        <Label layoutX="26.0" layoutY="25.0" text="Profile">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                      </children>
                   </AnchorPane>
               </children>
